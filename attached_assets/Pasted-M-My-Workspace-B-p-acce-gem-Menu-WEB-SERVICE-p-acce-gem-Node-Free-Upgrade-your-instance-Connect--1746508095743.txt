@@ -1,0 +1,132 @@
+M
+My Workspace
+
+
+B
+p-acce-gem
+Menu
+WEB SERVICE
+p-acce-gem
+Node
+Free
+Upgrade your instance
+
+Connect
+
+Manual Deploy
+BrunoRakotomalala62 / p-acce-gem
+main
+https://p-acce-gem.onrender.com
+
+Your free instance will spin down with inactivity, which can delay requests by 50 seconds or more.
+Upgrade now
+May 6, 2025 at 8:03 AM
+In Progress
+2c4fbaa
+Assistant checkpoint: Modifier la logique d'accès pour auto/gemini.js Assistant generated file changes: - handles/handleMessage.js: Modifier la logique d'accès pour auto/gemini.js, Déplacer la vérification des commandes --- User prompt: Comment ajouter la logique suivant : La commande dans le répertoire auto/ Répond à tous les utilisateurs accès ou pas accès au abonnement C'est à dire cette auto/gemini.js répond à tous les messages de l'utilisateur abonnés ou pas abonné Mais on reste inchangé la logique pour les autres commandes ( les utilisateurs abonnés seulement utilise les autres commandes sauf uid) uid est autorisé à utiliser à tous les utilisateurs abonnés ou pas abonné Mais les autres pas changer son logique Replit-Commit-Author: Assistant Replit-Commit-Session-Id: ad2323af-7064-4b81-8465-871ea641b553
+Cancel deploy
+p-acce-gem
+Logs
+
+Logs
+
+All logs
+Search
+Search
+
+Live tail
+GMT+3
+Menu
+INFO
+==> Cloning from https://github.com/BrunoRakotomalala62/p-acce-gem
+INFO
+==> Checking out commit 2c4fbaa1e13a6106f4a48c2bed8c50f170b69bc5 in branch main
+INFO
+==> Requesting Node.js version >=14.0.0
+INFO
+==> Using Node.js version 23.11.0 via /opt/render/project/src/package.json
+INFO
+==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+INFO
+==> Using Bun version 1.1.0 (default)
+INFO
+==> Docs on specifying a bun version: https://render.com/docs/bun-version
+INFO
+==> Running build command 'npm install'...
+INFO
+INFO
+added 183 packages, and audited 184 packages in 2s
+INFO
+INFO
+39 packages are looking for funding
+INFO
+  run `npm fund` for details
+INFO
+INFO
+3 high severity vulnerabilities
+INFO
+INFO
+To address all issues (including breaking changes), run:
+INFO
+  npm audit fix --force
+INFO
+INFO
+Run `npm audit` for details.
+INFO
+==> Uploading build...
+INFO
+==> Uploaded in 4.3s. Compression took 0.9s
+INFO
+==> Build successful 🎉
+INFO
+==> Deploying...
+INFO
+==> Running 'node index.js'
+INFO
+==> No open ports detected, continuing to scan...
+INFO
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+INFO
+/opt/render/project/src/handles/handleMessage.js:54
+INFO
+    const isCommandAllowed = message.text && (
+INFO
+          ^
+INFO
+INFO
+SyntaxError: Identifier 'isCommandAllowed' has already been declared
+INFO
+    at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+INFO
+    at Module._compile (node:internal/modules/cjs/loader:1708:20)
+INFO
+    at Object..js (node:internal/modules/cjs/loader:1899:10)
+INFO
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+INFO
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+INFO
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+INFO
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+INFO
+    at Module.require (node:internal/modules/cjs/loader:1491:12)
+INFO
+    at require (node:internal/modules/helpers:135:16)
+INFO
+    at Object.<anonymous> (/opt/render/project/src/index.js:12:23)
+INFO
+INFO
+Node.js v23.11.0
+INFO
+==> No open ports detected, continuing to scan...
+INFO
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+Need better ways to work with logs? Try theRender CLIor set up a log stream integration 
+
+0 services selected:
+
+Move
+
+Generate Blueprint
+
