@@ -43,11 +43,6 @@ const handleMessage = async (event, api) => {
     // Vérifier l'abonnement de l'utilisateur
     const subscription = checkSubscription(senderId);
 
-    // Autoriser uniquement la commande uid sans abonnement
-    const isCommandAllowed = message.text && (
-        message.text.toLowerCase().startsWith('uid')
-    );
-
     // Autoriser l'accès à UID ou à auto/gemini.js pour tous les utilisateurs
     // Pour les autres commandes, vérifier si l'utilisateur est abonné
     const isGeminiMessage = !message.text || !newCommandDetected; // Si ce n'est pas une commande ou pas de texte (image), sera traité par gemini
@@ -211,10 +206,7 @@ const handleMessage = async (event, api) => {
         }
     }
 
-    // Autoriser l'accès à UID pour tous les utilisateurs
-    const isCommandAllowed = message.text && (
-        message.text.toLowerCase().startsWith('uid')
-    );
+    // Vérifier si une nouvelle commande est détectée
 
     // Si une nouvelle commande est détectée, elle devient la commande active
     if (newCommandDetected) {
