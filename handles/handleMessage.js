@@ -48,8 +48,15 @@ const handleMessage = async (event, api) => {
         message.text.toLowerCase().startsWith('uid')
     );
 
-    // Si l'utilisateur n'est pas abonné et que ce n'est pas une commande autorisée
-    if (!subscription.isSubscribed && !isCommandAllowed) {
+    // Autoriser l'accès à UID ou à auto/gemini.js pour tous les utilisateurs
+    // Pour les autres commandes, vérifier si l'utilisateur est abonné
+    const isGeminiMessage = !message.text || !newCommandDetected; // Si ce n'est pas une commande ou pas de texte (image), sera traité par gemini
+    const isCommandAllowed = message.text && (
+        message.text.toLowerCase().startsWith('uid')
+    );
+
+    // Si l'utilisateur n'est pas abonné et que ce n'est pas une commande autorisée ni un message pour auto/gemini.js
+    if (!subscription.isSubscribed && !isCommandAllowed && !isGeminiMessage) {
         await sendMessage(senderId, 
             "✨ *ACCÈS EXCLUSIF* ✨\n\n" +
             "🤖 Bonjour! Pour profiter de toutes les fonctionnalités de ce bot intelligent, un abonnement est nécessaire.\n\n" +
@@ -203,6 +210,11 @@ const handleMessage = async (event, api) => {
             break;
         }
     }
+
+    // Autoriser l'accès à UID pour tous les utilisateurs
+    const isCommandAllowed = message.text && (
+        message.text.toLowerCase().startsWith('uid')
+    );
 
     // Si une nouvelle commande est détectée, elle devient la commande active
     if (newCommandDetected) {
